@@ -1,7 +1,6 @@
-var s;
-var scl = 20;
-
-var food;
+let s;
+let scl = 20;
+let food;
 
 function setup() {
   createCanvas(600, 600);
@@ -11,9 +10,9 @@ function setup() {
 }
 
 function pickLocation() {
-  var cols = floor(width / scl);
-  var rows = floor(height / scl);
-  food = createVector(floor(random(cols), random(rows)));
+  let cols = floor(width / scl);
+  let rows = floor(height / scl);
+  food = createVector(floor(random(cols)), floor(random(rows)));
   food.mult(scl);
 }
 
