@@ -17,7 +17,6 @@ function foodLocation() {
   let x = floor(random(w));
   let y = floor(random(h));
   food = createVector(x, y);
-
 }
 
 function keyPressed() {
@@ -30,7 +29,6 @@ function keyPressed() {
   } else if (keyCode === UP_ARROW) {
     snake.setDir(0, -1);
   }
-
 }
 
 function draw() {
@@ -41,6 +39,11 @@ function draw() {
   }
   snake.update();
   snake.show();
+
+  if (snake.endGame()) {
+    background(255, 0, 0);
+    noLoop();
+  }
 
   noStroke();
   fill(255, 0, 0);
