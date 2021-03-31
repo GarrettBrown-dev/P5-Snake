@@ -7,6 +7,11 @@ class Snake {
     this.ydir = 0;
   }
 
+  setDir(x, y) {
+    this.xdir = x;
+    this.ydir = y;
+  }
+
   update() {
 
     this.body[0].x += this.xdir;
@@ -16,7 +21,7 @@ class Snake {
 
   show() {
     fill(0);
-    rect(this.body[0].x, this.body[0].y, 10, 10);
+    rect(this.body[0].x, this.body[0].y, 1, 1);
   }
 
 }
