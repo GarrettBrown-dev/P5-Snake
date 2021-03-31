@@ -14,9 +14,14 @@ class Snake {
   }
 
   update() {
+    let head = this.body[this.body.length - 1].copy();
+    this.body.shift();
+    head.x += this.xdir;
+    head.y += this.ydir;
+    this.body.push(head);
 
-    this.body[0].x += this.xdir;
-    this.body[0].y += this.ydir;
+    //this.body[0].x += this.xdir;
+    //this.body[0].y += this.ydir;
 
   }
 
