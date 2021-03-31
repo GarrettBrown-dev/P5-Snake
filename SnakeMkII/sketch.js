@@ -1,5 +1,5 @@
 let snake;
-let rez = 10;
+let rez = 20;
 let food;
 let w;
 let h;
@@ -36,6 +36,9 @@ function keyPressed() {
 function draw() {
   scale(rez);
   background(220);
+  if (snake.eat(food)) {
+    foodLocation();
+  }
   snake.update();
   snake.show();
 

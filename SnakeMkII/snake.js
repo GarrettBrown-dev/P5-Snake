@@ -19,6 +19,15 @@ class Snake {
 
   }
 
+  eat(pos) {
+    let x = this.body[0].x;
+    let y = this.body[0].y;
+    if (x == pos.x && y == pos.y) {
+      return true;
+    }
+    return false;
+  }
+
   show() {
     fill(0);
     noStroke();
